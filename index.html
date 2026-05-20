@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — AttendTrack | Recruitment Cell</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue:    #1A56DB;
+    --gold:    #F8C200;
+    --dark:    #0B1120;
+    --card:    #111827;
+    --border:  rgba(255,255,255,0.08);
+    --muted:   #64748B;
+    --text:    #E2E8F0;
+    --sub:     #94A3B8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  /* ── Header ─────────────────────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 28px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(11,17,32,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .hdr-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-icon {
+    width: 40px; height: 40px;
+    background: var(--blue);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-icon svg { width: 22px; height: 22px; }
+
+  .brand-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .brand-name span { color: var(--gold); }
+  .brand-sub { font-size: 11px; color: var(--sub); font-weight: 300; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .doc-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    background: rgba(26,86,219,0.18);
+    border: 1px solid rgba(26,86,219,0.35);
+    color: #93C5FD;
+    padding: 5px 12px;
+    border-radius: 99px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Hero ──────────────────────────────────────────────── */
+  .hero {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 32px 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 span { color: var(--blue); }
+
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--sub);
+  }
+
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-meta strong { color: var(--text); }
+
+  /* ── Content ───────────────────────────────────────────── */
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  /* ── TOC ───────────────────────────────────────────────── */
+  .toc {
+    margin: 48px 0 56px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 12px;
+    padding: 28px 32px;
+  }
+
+  .toc-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sub);
+    margin-bottom: 16px;
+  }
+
+  .toc ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+    counter-reset: toc;
+  }
+
+  .toc ol li { counter-increment: toc; }
+
+  .toc ol li a {
+    text-decoration: none;
+    color: #93C5FD;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.15s;
+  }
+
+  .toc ol li a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .toc ol li a:hover { color: #fff; }
+
+  /* ── Sections ──────────────────────────────────────────── */
+  section { margin-bottom: 56px; scroll-margin-top: 100px; }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section p {
+    font-size: 15px;
+    color: var(--sub);
+    margin-bottom: 16px;
+    line-height: 1.8;
+  }
+
+  section p:last-child { margin-bottom: 0; }
+
+  /* ── Data table ────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sub);
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--sub);
+    vertical-align: top;
+  }
+
+  .data-table td:first-child { color: var(--text); font-weight: 500; }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* ── Highlight cards ───────────────────────────────────── */
+  .highlight {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .highlight-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .highlight.green  { border-left: 3px solid #22C55E; }
+  .highlight.blue   { border-left: 3px solid var(--blue); }
+  .highlight.amber  { border-left: 3px solid var(--gold); }
+
+  .highlight.green  .highlight-icon { background: rgba(34,197,94,0.12); }
+  .highlight.blue   .highlight-icon { background: rgba(26,86,219,0.15); }
+  .highlight.amber  .highlight-icon { background: rgba(248,194,0,0.12); }
+
+  .highlight-body p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: var(--sub);
+  }
+
+  .highlight-body strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  /* ── List ──────────────────────────────────────────────── */
+  .pp-list {
+    list-style: none;
+    margin: 16px 0;
+  }
+
+  .pp-list li {
+    font-size: 15px;
+    color: var(--sub);
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.7;
+  }
+
+  .pp-list li:last-child { border-bottom: none; }
+
+  .pp-list li::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 17px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+  }
+
+  /* ── Contact card ──────────────────────────────────────── */
+  .contact-card {
+    background: linear-gradient(135deg, rgba(26,86,219,0.15), rgba(248,194,0,0.05));
+    border: 1px solid rgba(26,86,219,0.3);
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    color: var(--sub);
+    margin-bottom: 20px;
+  }
+
+  .contact-card .company {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .contact-card .tagline {
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  footer strong { color: var(--sub); }
+
+  @media (max-width: 600px) {
+    .toc ol { grid-template-columns: 1fr; }
+    .hero-meta { flex-direction: column; gap: 8px; }
+    .hdr-inner { flex-direction: column; gap: 12px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr-inner">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#F8C200" stroke-width="1.8"/>
+          <polyline points="12,6 12,12 16,14" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">Attend<span>Track</span></div>
+        <div class="brand-sub">Recruitment Cell</div>
+      </div>
+    </div>
+    <div class="doc-badge">Privacy Policy</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-label">Legal Document</div>
+  <h1>Privacy <span>Policy</span></h1>
+  <div class="hero-meta">
+    <span><strong>Effective date:</strong> May 2026</span>
+    <span><strong>Version:</strong> 1.0</span>
+    <span><strong>Product:</strong> AttendTrack Chrome Extension</span>
+    <span><strong>Organisation:</strong> Recruitment Cell</span>
+  </div>
+</div>
+
+<div class="content">
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Overview</a></li>
+      <li><a href="#s2">Data we collect</a></li>
+      <li><a href="#s3">How data is used</a></li>
+      <li><a href="#s4">Data storage &amp; security</a></li>
+      <li><a href="#s5">Data retention</a></li>
+      <li><a href="#s6">What we do not collect</a></li>
+      <li><a href="#s7">Employee rights</a></li>
+      <li><a href="#s8">Third-party services</a></li>
+      <li><a href="#s9">Changes to this policy</a></li>
+      <li><a href="#s10">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section id="s1">
+    <div class="section-num">01</div>
+    <h2>Overview</h2>
+    <p>AttendTrack is an internal employee attendance and activity monitoring Chrome extension developed and operated exclusively by <strong>Recruitment Cell</strong> ("we", "us", "our"). It is distributed to employees of Recruitment Cell only and is not publicly available.</p>
+    <p>This Privacy Policy explains what data the extension collects, how that data is used, where it is stored, and the rights available to employees. By installing and using AttendTrack, employees acknowledge that they have read and understood this policy.</p>
+    <div class="highlight green">
+      <div class="highlight-icon">🔒</div>
+      <div class="highlight-body">
+        <strong>Internal use only</strong>
+        <p>AttendTrack is a closed, internal tool. Data is never sold, shared with third-party advertisers, or used for any purpose outside of workforce management at Recruitment Cell.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <div class="section-num">02</div>
+    <h2>Data we collect</h2>
+    <p>AttendTrack collects the following categories of data when an employee is actively logged in and has clicked the <strong>Check In</strong> button:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>What is captured</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Attendance records</td>
+          <td>Check-in time, check-out time, total hours worked, date</td>
+          <td>Payroll, attendance reporting</td>
+        </tr>
+        <tr>
+          <td>Online/offline status</td>
+          <td>Whether Chrome is open and the employee is active after check-in</td>
+          <td>Live team monitoring</td>
+        </tr>
+        <tr>
+          <td>Idle periods</td>
+          <td>Start time, end time, and duration of idle sessions (no mouse or keyboard activity for 60+ seconds)</td>
+          <td>Productivity insights for managers</td>
+        </tr>
+        <tr>
+          <td>Open tab count</td>
+          <td>Number of non-Chrome-internal tabs open at the time of each heartbeat</td>
+          <td>Activity context in monitor view</td>
+        </tr>
+        <tr>
+          <td>Tab domains &amp; titles</td>
+          <td>Domain name and page title of up to 10 open tabs (e.g. "docs.google.com — Q2 Report")</td>
+          <td>Activity context in monitor view</td>
+        </tr>
+        <tr>
+          <td>Leave requests</td>
+          <td>Leave type, dates, reason, and approval status</td>
+          <td>Leave management</td>
+        </tr>
+        <tr>
+          <td>Account credentials</td>
+          <td>Employee ID and bcrypt-hashed password — plaintext password is never stored</td>
+          <td>Authentication</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight amber">
+      <div class="highlight-icon">⚡</div>
+      <div class="highlight-body">
+        <strong>Monitoring is gated on Check In</strong>
+        <p>No data is collected when an employee opens Chrome, opens a new tab, or logs into AttendTrack. Activity monitoring begins only after the employee explicitly clicks the <strong>Check In</strong> button and stops immediately after <strong>Check Out</strong> or <strong>Sign Out</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <div class="section-num">03</div>
+    <h2>How data is used</h2>
+    <p>Data collected by AttendTrack is used solely for the following purposes within Recruitment Cell:</p>
+    <ul class="pp-list">
+      <li>Generating daily and monthly attendance reports for HR and management</li>
+      <li>Providing managers with a real-time view of their team's availability and activity</li>
+      <li>Calculating hours worked and identifying late arrivals or early departures</li>
+      <li>Managing employee leave requests and approvals</li>
+      <li>Identifying extended idle periods for team productivity discussions</li>
+      <li>Supporting internal compliance and workforce planning</li>
+    </ul>
+    <p>Data is accessed only by authorised personnel — specifically the employee themselves, their direct manager, and system administrators at Recruitment Cell.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <div class="section-num">04</div>
+    <h2>Data storage &amp; security</h2>
+    <p>All attendance, activity, and leave data is stored in a <strong>Supabase</strong> database hosted on secure cloud infrastructure. The following security measures are in place:</p>
+    <ul class="pp-list">
+      <li>All data in transit is encrypted using TLS (HTTPS)</li>
+      <li>Passwords are stored as bcrypt hashes — plaintext passwords are never stored or transmitted</li>
+      <li>Row-Level Security (RLS) policies are enforced at the database level — employees can only access their own records</li>
+      <li>Database access is restricted to authorised API keys only; no public access is permitted</li>
+      <li>Session data is stored in Chrome's local extension storage, which is sandboxed to the extension and inaccessible to websites or other extensions</li>
+    </ul>
+    <div class="highlight blue">
+      <div class="highlight-icon">🛡️</div>
+      <div class="highlight-body">
+        <strong>No screen recording or keystroke logging</strong>
+        <p>AttendTrack does not capture screenshots, record screen activity, log keystrokes, read clipboard content, or access browser history. Only idle/active presence status and open tab metadata are tracked.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <div class="section-num">05</div>
+    <h2>Data retention</h2>
+    <p>Data is retained as follows:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data type</th><th>Retention period</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Attendance records</td><td>12 months from the date of record</td></tr>
+        <tr><td>Activity logs (heartbeats, idle events)</td><td>90 days from the date of record</td></tr>
+        <tr><td>Leave requests</td><td>12 months from the date of submission</td></tr>
+        <tr><td>Employee account data</td><td>Retained until the employee's account is deleted by an administrator</td></tr>
+      </tbody>
+    </table>
+    <p>Administrators may delete individual employee records or all historical data at any time via the Supabase management console.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <div class="section-num">06</div>
+    <h2>What we do not collect</h2>
+    <p>AttendTrack explicitly does <strong>not</strong> collect the following:</p>
+    <ul class="pp-list">
+      <li>Screenshots or screen recordings of any kind</li>
+      <li>Keystrokes, typed content, or clipboard data</li>
+      <li>Browser history, bookmarks, or saved passwords</li>
+      <li>Email content, file contents, or document data</li>
+      <li>Microphone, camera, or location data</li>
+      <li>Personal financial information</li>
+      <li>Data from websites visited on personal devices</li>
+      <li>Any data outside of working hours (after Check Out or Sign Out)</li>
+    </ul>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <div class="section-num">07</div>
+    <h2>Employee rights</h2>
+    <p>Employees of Recruitment Cell have the following rights regarding their data collected by AttendTrack:</p>
+    <ul class="pp-list">
+      <li><strong>Right to access:</strong> Employees can view their own attendance records, check-in/check-out times, and leave history directly within the AttendTrack application</li>
+      <li><strong>Right to correction:</strong> Employees may request correction of inaccurate attendance records by contacting their manager or HR</li>
+      <li><strong>Right to deletion:</strong> Upon leaving the organisation, employee accounts and associated data will be deleted upon request to HR or an administrator</li>
+      <li><strong>Right to transparency:</strong> Employees are entitled to know what data is collected about them, as documented in this policy</li>
+      <li><strong>Right to change password:</strong> Employees can update their own login password at any time directly within the application</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <div class="section-num">08</div>
+    <h2>Third-party services</h2>
+    <p>AttendTrack uses the following third-party service to store and manage data:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Service</th><th>Purpose</th><th>Data shared</th><th>Privacy policy</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Supabase</td>
+          <td>Database and authentication backend</td>
+          <td>Attendance records, activity logs, user accounts, leave requests</td>
+          <td>supabase.com/privacy</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>No other third-party services, analytics platforms, advertising networks, or tracking tools are used by AttendTrack. Data is never sold or shared with any external parties.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <div class="section-num">09</div>
+    <h2>Changes to this policy</h2>
+    <p>Recruitment Cell reserves the right to update this Privacy Policy at any time. When changes are made, the effective date at the top of this document will be updated. Employees will be notified of material changes by their manager or HR department.</p>
+    <p>Continued use of the AttendTrack extension after a policy update constitutes acceptance of the revised terms.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <div class="section-num">10</div>
+    <h2>Contact us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the data AttendTrack collects about you, please contact:</p>
+    <div class="contact-card">
+      <h3>Recruitment Cell</h3>
+      <p>For privacy-related queries regarding the AttendTrack extension</p>
+      <div class="company">HR Department — Recruitment Cell</div>
+      <div class="tagline">Mapping Talent Globally</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 <strong>Recruitment Cell</strong>. All rights reserved. &nbsp;·&nbsp; AttendTrack Privacy Policy v1.0 &nbsp;·&nbsp; Effective May 2026</p>
+</footer>
+
+</body>
+</html>
